@@ -3,6 +3,7 @@
 // import { useState } from "react"
 import { DarkGradientPricing } from "@/components/ui/dark-gradient-pricing"
 import { TestimonialsMarquee } from "@/components/ui/testimonials-marquee"
+import { RubiksCubeScene } from "@/components/ui/rubiks-cube-scene"
 // import { GlowingCard, GlowingBadge, GlowingButton, GlowingText } from "@/components/ui/glowing-effect"
 import { motion } from "framer-motion"
 import { FileText, CreditCard, Shield, Package, Phone, Mail, Building } from "lucide-react"
@@ -70,6 +71,9 @@ export default function Home() {
     <div className="min-h-screen bg-black text-white">
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        {/* 3D Rubik's Cube Background */}
+        <RubiksCubeScene />
+        
         {/* Animated Background */}
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-black to-purple-900/20" />
