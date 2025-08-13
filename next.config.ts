@@ -6,6 +6,8 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true
   },
+  basePath: '/DnotasFilialBD',
+  assetPrefix: '/DnotasFilialBD',
   eslint: {
     ignoreDuringBuilds: true,
   },
