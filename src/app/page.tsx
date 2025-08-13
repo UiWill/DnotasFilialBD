@@ -1,7 +1,6 @@
 "use client"
 
 // import { useState } from "react"
-import { BackgroundCube } from "@/components/ui/background-cube"
 import { DarkGradientPricing } from "@/components/ui/dark-gradient-pricing"
 import { TestimonialsMarquee } from "@/components/ui/testimonials-marquee"
 // import { GlowingCard, GlowingBadge, GlowingButton, GlowingText } from "@/components/ui/glowing-effect"
@@ -72,7 +71,6 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* 3D Cube Background */}
-        <BackgroundCube />
         
         {/* Subtle overlay */}
         <div className="absolute inset-0 bg-black/50" />
