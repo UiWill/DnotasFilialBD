@@ -4,6 +4,7 @@
 import { DarkGradientPricing } from "@/components/ui/dark-gradient-pricing"
 import { TestimonialsMarquee } from "@/components/ui/testimonials-marquee"
 import { RubiksCubeScene } from "@/components/ui/rubiks-cube-scene"
+import { RubiksCubeSceneV2 } from "@/components/ui/rubiks-cube-scene-v2"
 import { TestCube } from "@/components/ui/test-cube"
 // import { GlowingCard, GlowingBadge, GlowingButton, GlowingText } from "@/components/ui/glowing-effect"
 import { motion } from "framer-motion"
@@ -74,7 +75,7 @@ export default function Home() {
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* 3D Rubik's Cube Background */}
         <div className="absolute inset-0 z-0">
-          <TestCube />
+          <RubiksCubeSceneV2 />
         </div>
         
         {/* Animated Background */}
