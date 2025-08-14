@@ -4,6 +4,7 @@
 import { DarkGradientPricing } from "@/components/ui/dark-gradient-pricing"
 import { TestimonialsMarquee } from "@/components/ui/testimonials-marquee"
 import { RubiksCubeScene } from "@/components/ui/rubiks-cube-scene"
+import { TestCube } from "@/components/ui/test-cube"
 // import { GlowingCard, GlowingBadge, GlowingButton, GlowingText } from "@/components/ui/glowing-effect"
 import { motion } from "framer-motion"
 import { FileText, CreditCard, Shield, Package, Phone, Mail, Building } from "lucide-react"
@@ -72,20 +73,22 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* 3D Rubik's Cube Background */}
-        <RubiksCubeScene />
+        <div className="absolute inset-0 z-0">
+          <TestCube />
+        </div>
         
         {/* Animated Background */}
-        <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-black to-purple-900/20" />
+        <div className="absolute inset-0 z-10">
+          <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-black/50 to-purple-900/20" />
           <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse" />
           <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }} />
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-green-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '4s' }} />
         </div>
         
         {/* Subtle overlay */}
-        <div className="absolute inset-0 bg-black/30" />
+        <div className="absolute inset-0 bg-black/20 z-20" />
 
-        <div className="container mx-auto px-4 relative z-10">
+        <div className="container mx-auto px-4 relative z-30">
           <div className="text-center max-w-4xl mx-auto mt-64">
 
             <motion.h1

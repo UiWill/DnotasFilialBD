@@ -283,9 +283,10 @@ function CameraController() {
 function SceneContent() {
   return (
     <>
-      <ambientLight intensity={0.3} />
-      <directionalLight position={[10, 10, 5]} intensity={1} />
-      <pointLight position={[-10, -10, -5]} intensity={0.5} />
+      <ambientLight intensity={0.6} />
+      <directionalLight position={[10, 10, 5]} intensity={1.5} />
+      <pointLight position={[-10, -10, -5]} intensity={0.8} />
+      <pointLight position={[5, -5, 5]} intensity={0.6} color="#ffffff" />
       
       <PerspectiveCamera
         makeDefault
@@ -297,8 +298,8 @@ function SceneContent() {
 
       <CameraController />
 
-      <Suspense fallback={null}>
-        <RubiksCubeModel position={[0, 0, 0]} scale={1} />
+      <Suspense fallback={<mesh><boxGeometry args={[1,1,1]} /><meshBasicMaterial color="blue" /></mesh>}>
+        <RubiksCubeModel position={[0, 0, 0]} scale={1.5} />
       </Suspense>
     </>
   );
@@ -306,12 +307,17 @@ function SceneContent() {
 
 export function RubiksCubeScene() {
   return (
-    <div className="absolute inset-0 pointer-events-none">
+    <div className="absolute inset-0 pointer-events-none z-0">
       <Canvas
         gl={{
           antialias: true,
           alpha: true,
           powerPreference: "high-performance",
+        }}
+        style={{ 
+          width: '100%', 
+          height: '100%',
+          background: 'transparent'
         }}
       >
         <SceneContent />
